@@ -11,7 +11,10 @@ app = FastAPI()
 # Enable CORS so frontend can call backend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # allow React dev server
+    allow_origins=[
+        "http://localhost:5173",
+        "https://tales-frontend.onrender.com",  # future frontend
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
